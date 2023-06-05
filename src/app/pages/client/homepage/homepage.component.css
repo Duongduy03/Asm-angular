@@ -1,0 +1,81 @@
+/*  */
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: transparent !important;
+  border: none;
+  width: 5% !important;
+}
+.carousel-item img {
+  height: 850px;
+  object-fit: cover;
+}
+/*  */
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100rem;
+  border: none;
+}
+article {
+  margin-bottom: 135px;
+}
+.opacity {
+  position: relative;
+}
+.view-detail {
+  position: absolute;
+  bottom: 0px;
+  margin: 0px 20px;
+  opacity: 0;
+  background-color: rgb(76, 76, 62, 0.8);
+  border: none;
+  outline: none;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+}
+.add-cart {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  margin: 0px 20px;
+  opacity: 0;
+  background-color: rgb(76, 76, 62, 0.8);
+  border: none;
+  outline: none;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+}
+.add-cart:hover {
+  background-color: black;
+}
+.view-detail:hover {
+  background-color: black;
+}
+.product-image:hover .opacity .view-detail {
+  opacity: 1;
+  /* height: auto; */
+  position: absolute;
+  bottom: 10px;
+  transition: 0.5s linear;
+  /* transform: scale(1.1); */
+}
+.product-image:hover .opacity .add-cart {
+  opacity: 1;
+  /* height: auto; */
+  position: absolute;
+  bottom: 10px;
+  transition: 0.5s linear;
+  /* transform: scale(1.1); */
+}
+.product-name {
+  width: 285px;
+  height: 58px;
+}
+@media screen and (max-width: 767.98px) {
+  .carousel-item img {
+    height: 550px;
+    object-fit: cover;
+  }
+}

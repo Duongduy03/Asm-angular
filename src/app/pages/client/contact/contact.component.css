@@ -1,0 +1,490 @@
+.get {
+  margin-bottom: 166px;
+}
+.get-in {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.get-in img {
+  width: 45%;
+}
+.get-top h1 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.get-top p {
+  font-size: 24px;
+  font-weight: 500;
+  color: #707070;
+  margin-bottom: 25px;
+  max-width: 517px;
+}
+.get-form input {
+  display: block;
+}
+.get-form--name {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+  margin-bottom: 47px;
+}
+.get-form--email label,
+.get-form--message label,
+.get-form--name label {
+  font-size: 20px;
+  display: block;
+  margin-bottom: 11px;
+}
+.get-form--name input {
+  border: none;
+  background-color: #f5f5f5;
+  padding: 10px 20px;
+  width: 215px;
+}
+.get-form--email {
+  margin-bottom: 47px;
+}
+.get-form--email input {
+  border: none;
+  background-color: #f5f5f5;
+  padding: 10px 20px;
+  width: 474px;
+}
+.get-form--message textarea {
+  border: none;
+  background-color: #f5f5f5;
+  padding: 10px 20px;
+  width: 474px;
+  height: 204px;
+  margin-bottom: 56px;
+}
+.get-form a {
+  background-color: #dd963c;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 15px 30px;
+  transition: all 0.3s linear;
+}
+.get-form a:hover {
+  background-color: #df8611;
+}
+.address {
+  margin-bottom: 123px;
+}
+.address-contact {
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.address-item h4 {
+  color: #707070;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.address-item p {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #707070;
+}
+.stores {
+  margin-bottom: 166px;
+}
+.store {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+  gap: 30px;
+}
+.store img {
+  width: 45%;
+}
+.store-location--item {
+  margin-bottom: 62px;
+}
+.store-location--item h3 {
+  color: #606060;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.store-location--item p {
+  max-width: 471px;
+  font-size: 28px;
+  color: #606060;
+}
+@media screen and (min-width: 1280px) {
+  .toogle {
+    display: none;
+  }
+  .header-top {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .about-icons {
+    margin-bottom: 100px;
+  }
+  .get-in {
+    align-items: stretch;
+  }
+  .get-in img {
+    object-fit: cover;
+    width: 45%;
+  }
+  .get-top h1 {
+    font-size: 38px;
+  }
+  .get-top p {
+    font-size: 20px;
+  }
+  .address-contact {
+    padding: 0 70px;
+    gap: 200px;
+  }
+  .stores {
+    margin-bottom: 100px;
+  }
+  .store {
+    flex-direction: column;
+  }
+  .store img {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .store-location {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .store-location--item h3 {
+    font-size: 30px;
+  }
+  .store-location--item p {
+    font-size: 22px;
+  }
+  .get-in {
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 1023.98px) {
+  .contact {
+    margin-top: 150px;
+  }
+  .store-location {
+    gap: 30px;
+  }
+  .store-location--item h3 {
+    font-size: 24px;
+  }
+  .store-location--item p {
+    font-size: 16px;
+  }
+  .address-contact {
+    gap: 80px;
+    align-items: flex-start;
+  }
+  .address-item h4 {
+    font-size: 20px;
+  }
+  .address-item p {
+    font-size: 16px;
+  }
+  .get-in {
+    gap: 30px;
+  }
+  .get-in img {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .get {
+    margin-bottom: 100px;
+  }
+  .get-top h1 {
+    font-size: 30px;
+  }
+  .get-top p {
+    font-size: 16px;
+    max-width: 350px;
+  }
+  .get-form {
+    width: 45%;
+  }
+  .get-form--name {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .get-form--name input {
+    width: 345px;
+  }
+  .get-form--email input {
+    width: 345px;
+  }
+  .get-form--message textarea {
+    width: 345px;
+  }
+  .address-contact {
+    padding: 0 30px;
+  }
+  .stores {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 479.98px) {
+  .get {
+    margin-bottom: 100px;
+  }
+  .get-top h1 {
+    font-size: 30px;
+  }
+
+  .get-top p {
+    font-size: 16px;
+    max-width: 350px;
+  }
+  .get-form--name {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .get-form--btn {
+    width: 300px;
+  }
+  .get-form--name input {
+    width: 300px;
+  }
+  .get-form--email input {
+    width: 300px;
+  }
+  .get-form--message textarea {
+    width: 300px;
+  }
+  .get-in img {
+    display: none;
+  }
+  .address-contact {
+    padding: 0;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .address {
+    margin-bottom: 90px;
+  }
+  .stores {
+    margin-bottom: 50px;
+  }
+}
+.about {
+  margin-bottom: 115px;
+}
+.big-title {
+  font-size: 80px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 36px;
+}
+.about-icons {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 10px;
+  margin-bottom: 130px;
+}
+.about-icons span {
+  font-size: 30px;
+  font-weight: 500;
+  color: #808080;
+}
+.about-icon {
+  font-size: 35px;
+  color: #dd963c;
+}
+.about-video {
+  position: relative;
+  margin-bottom: 130px;
+}
+.about-video img:first-child {
+  width: 100%;
+}
+.about-video img:nth-child(2) {
+  opacity: 0.8;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.experience-abouts {
+  margin-top: 120px;
+}
+.experience-about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 150px;
+}
+.experience-about--content h2 {
+  max-width: 501px;
+  font-size: 36px;
+  margin-bottom: 51px;
+}
+.experience-about--content p {
+  max-width: 563px;
+  color: #808080;
+  font-size: 24px;
+}
+.instagram {
+  margin-bottom: 190px;
+}
+.instagram-btn {
+  padding: 15px 52px;
+  background-color: #dd963c;
+  margin-bottom: 97px;
+  font-size: 24px;
+  font-weight: 600;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s linear;
+}
+.instagram-btn:hover {
+  background-color: #df8611;
+}
+.instagram-btn a {
+  color: #fff;
+}
+.instagram-image {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.instagram-image img {
+  transition: all 0.4s linear;
+}
+.instagram-image img:hover {
+  transform: scale(1.15, 1.15);
+}
+@media screen and (min-width: 1280px) {
+  .toogle {
+    display: none;
+  }
+  .header-top {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .experience-about {
+    gap: 30px;
+  }
+  .experience-about--content h2 {
+    font-size: 30px;
+  }
+  .experience-about--content p {
+    font-size: 18px;
+  }
+  .instagram-image img {
+    width: 300px;
+    height: 432px;
+    object-fit: cover;
+  }
+  .instagram-image img:hover {
+    transform: none;
+  }
+}
+@media screen and (max-width: 1023.98px) {
+  .about {
+    margin-top: 130px;
+  }
+  .experience-about {
+    gap: 30px;
+  }
+  .experience-about img {
+    width: 50%;
+  }
+  .experience-about--content h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .experience-about--content p {
+    font-size: 16px;
+  }
+  .instagram-image img {
+    width: 230px;
+    height: 362px;
+    object-fit: cover;
+  }
+  .instagram-image img:hover {
+    transform: none;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .instagram-image img {
+    width: 180px;
+  }
+  .instagram {
+    margin-bottom: 100px;
+  }
+  .experience-about {
+    flex-direction: column;
+  }
+  .experience-about img {
+    width: auto;
+    height: auto;
+  }
+}
+@media screen and (max-width: 479.98px) {
+  .big-title {
+    font-size: 60px;
+    margin-bottom: 15px;
+  }
+  .about-icons {
+    margin-bottom: 50px;
+  }
+  .about-video img:nth-child(2) {
+    width: 50px;
+    height: 50px;
+  }
+  .about-video {
+    margin-bottom: 50px;
+  }
+  .about {
+    margin-bottom: 80px;
+  }
+  .experience-abouts {
+    margin-top: 80px;
+  }
+  .experience-about {
+    flex-direction: column;
+  }
+  .experience-about img {
+    width: 100%;
+  }
+  .instagram {
+    margin-bottom: 90px;
+  }
+  .instagram-btn {
+    font-size: 16px;
+  }
+  .instagram-image {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .instagram-image img {
+    width: 80%;
+  }
+}

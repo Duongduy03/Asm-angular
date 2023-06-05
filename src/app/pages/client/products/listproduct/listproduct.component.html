@@ -1,0 +1,206 @@
+<main>
+  <section class="contact">
+    <div class="container">
+      <h1 class="big-title">Products</h1>
+      <div class="about-icons">
+        <a routerLink="/">
+          <i class="about-icon bx bxs-home"></i>
+        </a>
+        <span> / Shop</span>
+      </div>
+    </div>
+  </section>
+  <section class="sales">
+    <div class="container">
+      <div class="sale">
+        <div class="sale-left">
+          <h1>Top Designer Pick</h1>
+          <p>
+            The pinnacle of versatility, our core collection is flattering on
+            all body types, looks great layered or alone, and is designed to
+            span the seasons 90’ s sustainable photo booth
+          </p>
+        </div>
+        <h1 class="sale-off">50% OFF</h1>
+      </div>
+    </div>
+    <img
+      src="../../../../../assets/images/img14.png"
+      alt=""
+      style="width: 100%"
+    />
+    <img
+      src="../../../../../assets/images/img29.png"
+      alt=""
+      style="width: 100%"
+      class="img-special"
+    />
+  </section>
+  <section class="shops">
+    <div class="container">
+      <div class="shop">
+        <div class="shop-item">
+          <div class="shop-title">
+            <h1>Collection</h1>
+            <img src="../../../../../assets/images/line.svg" alt="" />
+          </div>
+          <div class="collection">
+            <div class="collection-image">
+              <img
+                src="../../../../../assets/images/50.svg"
+                alt=""
+                class="collection-img"
+              />
+              <img
+                src="../../../../../assets/images/Women's.svg"
+                alt=""
+                class="collection-img"
+              />
+              <img
+                src="../../../../../assets/images/Men's.svg"
+                alt=""
+                class="collection-img"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="shop-item">
+          <div class="shop-title">
+            <h1>Top Sellers</h1>
+            <img src="../../../../../assets/images/line.svg" alt="" />
+          </div>
+          <div class="products">
+            <div class="product-item" *ngFor="let product of products">
+              <div class="product-image">
+                <img
+                  src="../../../../assets/images/img3.png"
+                  alt=""
+                  class="product-img"
+                />
+                <div class="opacity">
+                  <img
+                    src="../../../../assets/images/img4.png"
+                    alt=""
+                    class="product-img1"
+                  />
+                  <a routerLink="/products/{{ product._id }}">
+                    <button class="view-detail">View Detail</button>
+                  </a>
+                  <a routerLink="/cart">
+                    <button class="add-cart">Add to cart</button>
+                  </a>
+                </div>
+              </div>
+
+              <div class="product-top">
+                <h4>Shirts</h4>
+                <img src="../../../../assets/images/star.svg" alt="" />
+              </div>
+              <h3 class="product-name">{{ product.name }}</h3>
+              <div class="product-top">
+                <h3>$ 20.00</h3>
+                <img src="../../../../assets/images/circle.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="shop-item">
+          <div class="shop-title">
+            <h1>New Arrivals</h1>
+            <img src="../../../../../assets/images/line.svg" alt="" />
+          </div>
+          <div class="products">
+            <div class="product-item" *ngFor="let product of products">
+              <div class="product-image">
+                <img
+                  src="../../../../assets/images/img3.png"
+                  alt=""
+                  class="product-img"
+                />
+                <div class="opacity">
+                  <img
+                    src="../../../../assets/images/img4.png"
+                    alt=""
+                    class="product-img1"
+                  />
+                  <a routerLink="/products/{{ product._id }}">
+                    <button class="view-detail">View Detail</button>
+                  </a>
+                  <a routerLink="/cart">
+                    <button class="add-cart">Add to cart</button>
+                  </a>
+                </div>
+              </div>
+
+              <div class="product-top">
+                <h4>Shirts</h4>
+                <img src="../../../../assets/images/star.svg" alt="" />
+              </div>
+              <h3 class="product-name">{{ product.name }}</h3>
+              <div class="product-top">
+                <h3>$ 20.00</h3>
+                <img src="../../../../assets/images/circle.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="user">
+    <div class="container">
+      <div class="shops">
+        <div class="shop">
+          <div class="shop-item">
+            <div class="shop-title">
+              <h1>Featured</h1>
+              <img src="../../../../../assets/images/line.svg" alt="" />
+            </div>
+            <div class="featured-img">
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1602810318660-d2c46b750f88?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387"
+                  alt=""
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1612874470096-d93a610de87b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTN8fGZhc2hpb24lMjBnaXJsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500"
+                  alt=""
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1506629082955-511b1aa562c8?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387"
+                  alt=""
+                />
+                <img src="../../../../../assets/images/img7.svg" alt="" />
+              </div>
+              <img
+                src="https://images.unsplash.com/photo-1612215327100-60fc5c4d7938?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464"
+                alt=""
+                class="img-big"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="user-talk">
+        <img
+          src="../../../../../assets/images/star.svg"
+          alt=""
+          class="user-icon"
+        />
+        <p>
+          "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam ex,
+          provident dolorum repudiandae eum ducimus, iure eaque architecto
+          corporis suscipit enim, commodi magni ut atque iste quis natus illo
+          sit. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Laboriosam esse, ullam non reiciendis voluptatem alias, enim facilis
+          amet atque placeat similique necessitatibus"
+        </p>
+        <div class="user-author">
+          <img src="../../../../../assets/images/img28.jpg" alt="" />
+          <div class="user-name">Duong Van Duy</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
