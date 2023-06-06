@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ProductService } from 'src/app/services/service.service';
 import { FormBuilder, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Iproduct } from 'src/app/interfaces/product';
 
 @Component({
@@ -18,6 +18,7 @@ export class UpdateComponent  {
     description: [''],
   })
   constructor(
+    private router : Router,
     private productService: ProductService,
     private route: ActivatedRoute,
     private formBuilder: FormBuilder
@@ -49,7 +50,8 @@ export class UpdateComponent  {
       }
 
       this.productService.updateProduct(product).subscribe(data => {
-        console.log(data)
+        alert("Update sản phẩm thành công")
+        this.router.navigateByUrl('/admin')
       })
     }
 
