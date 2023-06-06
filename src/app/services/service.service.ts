@@ -8,23 +8,10 @@ import { switchMap } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class ProductService {
-  private apiUrl = 'http://localhost:8080/api/products'; // Thay đổi URL tương ứng với server của bạn
+  private apiUrl = 'http://localhost:8080/api/products';
+ 
 
   constructor(private http: HttpClient) {}
-
-  // getProducts(): Observable<Iproduct[]> {
-  //   return this.http.get<any>(this.apiUrl).pipe(
-  //     map((response) =>
-  //       response.datas.map((data: any) => ({
-  //         id: data._id,
-  //         name: data.name,
-  //         price: data.price,
-  //         desc: data.description,
-  //       }))
-  //     ),
-  //     catchError(this.handleError)
-  //   );
-  // }
   getProducts(): Observable<Iproduct[]> {
     return this.http.get<any>(this.apiUrl).pipe(
       switchMap((response) => {
@@ -51,14 +38,17 @@ export class ProductService {
     const url = `${this.apiUrl}/${id}`;
     return this.http.get<any>(url);
   }
-
-  createProduct(product: any): Observable<any> {
-    return this.http.post<any>(this.apiUrl, product);
+  getProductById(id: string): Observable<Iproduct> {
+    return this.http.get<Iproduct>(`${this.apiUrl}/${id}`);
   }
 
-  updateProduct(id: string, product: any): Observable<any> {
-    const url = `${this.apiUrl}/${id}`;
-    return this.http.put<any>(url, product);
+  createProduct(product: any): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/add`, product);
+  }
+
+  updateProduct( product: any): Observable<any> {
+    const url = `http://localhost:8080/api/products/update/${product._id}`;
+    return this.http.patch<any>(url, product);
   }
 
   deleteProduct(id: string): Observable<any> {

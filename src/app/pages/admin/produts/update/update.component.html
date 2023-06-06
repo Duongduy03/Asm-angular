@@ -1,1 +1,26 @@
-<p>update works!</p>
+<!-- <div class="container">
+    <form  (ngSubmit)="onHandleSubmit()" [formGroup]="productForm">
+        <input type="text" formControlName="_id" hidden>
+      <input type="text" formControlName="name" placeholder="Tên sản phẩm" />
+      <input type="number" formControlName="price" placeholder="Giá sản phẩm" />
+      <input type="text" formControlName="image" placeholder="Ảnh sản phẩm" />
+      <input type="text" formControlName="description" placeholder="Mô tả sản phẩm" />
+      <button>Cập nhật sản phẩm</button>
+    </form>
+  </div> -->
+
+  <form (ngSubmit)="onHandleEdit()" [formGroup]="productForm">
+    <div class="form-group">
+      <input type="text" placeholder="Tên sản phẩm" formControlName="name" />
+    </div>
+    <div class="form-group">
+      <input type="number" placeholder="Giá sản phẩm" formControlName="price" />
+    </div>
+    <div class="form-group">
+        <input type="text" placeholder="Ảnh sản phẩm" formControlName="image" />
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Mô tả sản phẩm" formControlName="description" />
+      </div>
+    <button type="submit">Submit</button>
+  </form>

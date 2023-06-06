@@ -13,6 +13,8 @@ import { AboutComponent } from './pages/client/about/about.component';
 import { BlogComponent } from './pages/client/blog/blog.component';
 import { ContactComponent } from './pages/client/contact/contact.component';
 import { ProductListComponent } from './pages/admin/produts/product-list/product-list.component';
+import { AddComponent } from './pages/admin/produts/add/add.component';
+import { UpdateComponent } from './pages/admin/produts/update/update.component';
 
 const routes: Routes = [
   // Client
@@ -37,6 +39,8 @@ const routes: Routes = [
 
       { path: 'dashboard', component: DashboardComponent },
       { path: 'products', component: ProductListComponent },
+      { path: 'add', component: AddComponent },
+      { path: 'update/:id', component: UpdateComponent },
       // { path: 'products/:id', component: ProductDetailComponent },
     ],
   },
