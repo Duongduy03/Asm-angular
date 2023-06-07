@@ -41,6 +41,7 @@ const routes: Routes = [
       { path: 'products', component: ProductListComponent },
       { path: 'add', component: AddComponent },
       { path: 'update/:id', component: UpdateComponent },
+      { path: 'listadmin', component: ProductListComponent },
       // { path: 'products/:id', component: ProductDetailComponent },
     ],
   },
