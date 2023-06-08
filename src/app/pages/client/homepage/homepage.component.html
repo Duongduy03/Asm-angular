@@ -150,17 +150,9 @@
       <div class="products">
         <div class="product-item" *ngFor="let product of products">
           <div class="product-image">
-            <img
-              src="../../../../assets/images/img3.png"
-              alt=""
-              class="product-img"
-            />
+            <img src="{{ product.image }}" alt="" class="product-img" />
             <div class="opacity">
-              <img
-                src="../../../../assets/images/img4.png"
-                alt=""
-                class="product-img1"
-              />
+              <img src="{{ product.image1 }}" alt="" class="product-img1" />
               <a routerLink="/products/{{ product._id }}">
                 <button class="view-detail">View Detail</button>
               </a>
@@ -169,15 +161,16 @@
               </a>
             </div>
           </div>
-
-          <div class="product-top">
-            <h4>Shirts</h4>
-            <img src="../../../../assets/images/star.svg" alt="" />
-          </div>
-          <h3 class="product-name">{{ product.name }}</h3>
-          <div class="product-top">
-            <h3>$ 20.00</h3>
-            <img src="../../../../assets/images/circle.svg" alt="" />
+          <div>
+            <div class="product-top">
+              <h4>Shirts</h4>
+              <img src="../../../../assets/images/star.svg" alt="" />
+            </div>
+            <h3 class="product-name">{{ product.name }}</h3>
+            <div class="product-top">
+              <h3>$ {{ product.price }}</h3>
+              <img src="../../../../assets/images/circle.svg" alt="" />
+            </div>
           </div>
         </div>
       </div>

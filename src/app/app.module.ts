@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
@@ -20,11 +20,12 @@ import { HeaderAdminComponent } from './components/admin/header-admin/header-adm
 import { FooterAdminComponent } from './components/admin/footer-admin/footer-admin.component';
 import { HeaderComponent } from './components/client/header/header.component';
 import { FooterComponent } from './components/client/footer/footer.component';
-import { HttpClientModule } from '@angular/common/http';
+
 import { AboutComponent } from './pages/client/about/about.component';
 import { ContactComponent } from './pages/client/contact/contact.component';
 import { BlogComponent } from './pages/client/blog/blog.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AuthInterceptorInterceptor } from './interceptors/auth-interceptor.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,8 +50,20 @@ import { BlogComponent } from './pages/client/blog/blog.component';
     ContactComponent,
     BlogComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule,FormsModule],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptorInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
