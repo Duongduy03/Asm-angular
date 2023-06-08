@@ -13,7 +13,7 @@ import { AboutComponent } from './pages/client/about/about.component';
 import { BlogComponent } from './pages/client/blog/blog.component';
 import { ContactComponent } from './pages/client/contact/contact.component';
 import { ProductListComponent } from './pages/admin/produts/product-list/product-list.component';
-
+import { AuthGuard } from './guards/auth-guard.guard';
 const routes: Routes = [
   // Client
   {
@@ -32,6 +32,7 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminLayoutComponent,
+    canActivate: [AuthGuard],
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
 

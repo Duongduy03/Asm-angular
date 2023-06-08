@@ -17,7 +17,7 @@
             </div>
             <div class="col-md-6 col-lg-7 d-flex align-items-center">
               <div class="card-body p-4 p-lg-5 text-black">
-                <form>
+                <form [formGroup]="formSignup" (ngSubmit)="onHandleSubmit()">
                   <div class="d-flex align-items-center mb-3 pb-1">
                     <i
                       class="fas fa-cubes fa-2x me-3"
@@ -33,54 +33,129 @@
                     Form register
                   </h1>
                   <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example17"
+                      >User name</label
+                    >
                     <input
                       type="text"
                       id="form2Example17"
                       class="form-control form-control-lg"
-                      name="username"
+                      name="name"
+                      formControlName="name"
                     />
-                    <label class="form-label" for="form2Example17"
-                      >User name</label
+                    <div
+                      style="color: red"
+                      *ngIf="
+                        formSignup.get('name')?.hasError('required') &&
+                        (formSignup.get('name')?.touched ||
+                          formSignup.get('name')?.dirty)
+                      "
                     >
+                      UserName is Required
+                    </div>
                   </div>
                   <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example17"
+                      >Email address</label
+                    >
                     <input
                       type="email"
                       id="form2Example17"
                       class="form-control form-control-lg"
                       name="email"
+                      formControlName="email"
                     />
-                    <label class="form-label" for="form2Example17"
-                      >Email address</label
+                    <div
+                      style="color: red"
+                      *ngIf="
+                        formSignup.get('email')?.hasError('required') &&
+                        (formSignup.get('email')?.touched ||
+                          formSignup.get('email')?.dirty)
+                      "
                     >
+                      Email is Required
+                    </div>
+                    <div
+                      style="color: red"
+                      *ngIf="
+                        formSignup.get('email')?.hasError('email') &&
+                        (formSignup.get('email')?.touched ||
+                          formSignup.get('email')?.dirty)
+                      "
+                    >
+                      Invalid email
+                    </div>
                   </div>
 
                   <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example27"
+                      >Password</label
+                    >
                     <input
                       type="password"
                       id="form2Example27"
                       class="form-control form-control-lg"
                       name="password"
+                      formControlName="password"
                     />
-                    <label class="form-label" for="form2Example27"
-                      >Password</label
+                    <div
+                      style="color: red"
+                      *ngIf="
+                        formSignup.get('password')?.hasError('required') &&
+                        (formSignup.get('password')?.touched ||
+                          formSignup.get('email')?.dirty)
+                      "
                     >
+                      Password is required
+                    </div>
+                    <div
+                      style="color: red"
+                      *ngIf="
+                        formSignup.get('password')?.hasError('minlength') &&
+                        (formSignup.get('password')?.touched ||
+                          formSignup.get('password')?.dirty)
+                      "
+                    >
+                      Passwords must be at least 6 characters
+                    </div>
                   </div>
 
                   <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example27"
+                      >Confirm Password</label
+                    >
                     <input
                       type="password"
                       name="confirmPass"
                       id="form2Example27"
                       class="form-control form-control-lg"
+                      formControlName="confirmPass"
                     />
-                    <label class="form-label" for="form2Example27"
-                      >Confirm Password</label
+
+                    <div
+                      style="color: red"
+                      *ngIf="
+                        formSignup.get('confirmPass')?.hasError('required') &&
+                        (formSignup.get('confirmPass')?.touched ||
+                          formSignup.get('confirmPass')?.dirty)
+                      "
                     >
+                      Confirm Password is required
+                    </div>
+                    <div
+                      style="color: red"
+                      *ngIf="
+                        formSignup.hasError('passwordMismatch') &&
+                        (formSignup.get('confirmPass')?.touched ||
+                          formSignup.get('confirmPass')?.dirty)
+                      "
+                    >
+                      Password không trùng nhau
+                    </div>
                   </div>
 
                   <div class="pt-1 mb-4">
-                    <button class="btn btn-dark btn-lg btn-block" type="button">
+                    <button class="btn btn-dark btn-lg btn-block" type="submit">
                       Register
                     </button>
                   </div>
