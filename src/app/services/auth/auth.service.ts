@@ -16,4 +16,9 @@ export class AuthService {
   isAuthenticated(): any {
     return JSON.parse(localStorage.getItem('credential')!) || {};
   }
+  logout() {
+    localStorage.removeItem("token");
+    localStorage.removeItem("credential");
+    localStorage.removeItem("name");
+}
 }
