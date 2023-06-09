@@ -22,6 +22,9 @@ import { UpdateCategoryComponent } from './pages/admin/categories/update-categor
 import { ListUserComponent } from './pages/admin/users/list-user/list-user.component';
 import { AddUserComponent } from './pages/admin/users/add-user/add-user.component';
 import { UpdateUserComponent } from './pages/admin/users/update-user/update-user.component';
+import { CartComponent } from './pages/client/cart/cart.component';
+import { PaynowComponent } from './pages/client/paynow/paynow.component';
+
 const routes: Routes = [
   // Client
   {
@@ -34,6 +37,9 @@ const routes: Routes = [
       { path: 'about', component: AboutComponent },
       { path: 'blog', component: BlogComponent },
       { path: 'contact', component: ContactComponent },
+      { path: 'cart', component: CartComponent },
+      { path: 'paynow', component: PaynowComponent },
+      
     ],
   },
   // Admin

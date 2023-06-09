@@ -34,6 +34,9 @@ import { UpdateCommentComponent } from './pages/admin/comments/update-comment/up
 import { ListCommentComponent } from './pages/admin/comments/list-comment/list-comment.component';
 import { AddCategoryComponent } from './pages/admin/categories/add-category/add-category.component';
 import { UpdateCategoryComponent } from './pages/admin/categories/update-category/update-category.component';
+import { CartComponent } from './pages/client/cart/cart.component';
+import { PaynowComponent } from './pages/client/paynow/paynow.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,6 +68,8 @@ import { UpdateCategoryComponent } from './pages/admin/categories/update-categor
     ListCommentComponent,
     AddCategoryComponent,
     UpdateCategoryComponent,
+    CartComponent,
+    PaynowComponent,
   ],
   imports: [
     BrowserModule,
