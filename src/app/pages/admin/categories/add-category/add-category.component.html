@@ -1,0 +1,68 @@
+<section id="content">
+  <main>
+    <div class="head-title">
+      <div class="left">
+        <h1>Add Category</h1>
+        <ul class="breadcrumb">
+          <li>
+            <a routerLink="#">Admin</a>
+          </li>
+          <li><i class="bx bx-chevron-right"></i></li>
+          <li>
+            <a class="active">categories</a>
+          </li>
+          <li><i class="bx bx-chevron-right"></i></li>
+          <li>
+            <a class="active">Add</a>
+          </li>
+        </ul>
+      </div>
+      <a routerLink="#" class="btn-download">
+        <i class="bx bxs-cloud-download"></i>
+        <span class="text">Download PDF</span>
+      </a>
+    </div>
+    <hr />
+    <div class="form">
+      <form [formGroup]="formAdd" (ngSubmit)="onHandleSubmit()">
+        <div class="d-flex align-items-center mb-3 pb-1">
+          <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219"></i>
+          <!-- <span class="h1 fw-bold mb-0">Logo</span> -->
+        </div>
+
+        <h1
+          class="fw-normal mb-3 pb-3 h1 fw-bold mb-0"
+          style="letter-spacing: 1px"
+        >
+          Form Add
+        </h1>
+
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form2Example17">Category Name</label>
+          <input
+            type="text"
+            id="form2Example17"
+            class="form-control form-control-lg"
+            name="name"
+            formControlName="name"
+          />
+        </div>
+        <div
+          style="color: red"
+          *ngIf="
+            formAdd.get('name')?.hasError('required') &&
+            (formAdd.get('name')?.touched || formAdd.get('name')?.dirty)
+          "
+        >
+          Name is Required
+        </div>
+
+        <div class="pt-1 mb-4">
+          <button class="btn btn-primary" type="submit">
+            Add new category
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+</section>

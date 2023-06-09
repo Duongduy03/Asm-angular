@@ -53,12 +53,12 @@ export class ProductService {
   }
 
   createProduct(product: any): Observable<any> {
-    return this.http.post<any>(this.apiUrl, product);
+    return this.http.post<any>(`${this.apiUrl}/add`, product);
   }
 
-  updateProduct(id: string, product: any): Observable<any> {
-    const url = `${this.apiUrl}/${id}`;
-    return this.http.put<any>(url, product);
+  updateProduct(product: any): Observable<any> {
+    const url = `${this.apiUrl}/update/${product._id}`;
+    return this.http.patch<any>(url, product);
   }
 
   deleteProduct(id: string): Observable<any> {

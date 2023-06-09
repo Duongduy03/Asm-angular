@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap");
-
+.form-control {
+  padding: 0px 20px;
+}
 * {
   margin: 0;
   padding: 0;
@@ -560,9 +562,7 @@ li {
     min-width: 420px;
   }
 }
-.form-control {
-  padding: 0px 20px;
-}
+
 .head-title {
   /* background-color: white; */
   margin-bottom: 30px;
