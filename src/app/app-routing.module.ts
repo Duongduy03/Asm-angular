@@ -15,6 +15,7 @@ import { ContactComponent } from './pages/client/contact/contact.component';
 import { ProductListComponent } from './pages/admin/produts/product-list/product-list.component';
 import { AuthGuard } from './guards/auth-guard.guard';
 import { CartComponent } from './pages/client/cart/cart.component';
+import { PaynowComponent } from './pages/client/paynow/paynow.component';
 
 const routes: Routes = [
   // Client
@@ -29,6 +30,7 @@ const routes: Routes = [
       { path: 'blog', component: BlogComponent },
       { path: 'contact', component: ContactComponent },
       { path: 'cart', component: CartComponent },
+      { path: 'paynow', component: PaynowComponent },
       
     ],
   },

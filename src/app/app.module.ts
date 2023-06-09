@@ -27,6 +27,8 @@ import { BlogComponent } from './pages/client/blog/blog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthInterceptorInterceptor } from './interceptors/auth-interceptor.interceptor';
 import { CartComponent } from './pages/client/cart/cart.component';
+import { PaynowComponent } from './pages/client/paynow/paynow.component';
+
 
 @NgModule({
   declarations: [
@@ -52,6 +54,8 @@ import { CartComponent } from './pages/client/cart/cart.component';
     ContactComponent,
     BlogComponent,
     CartComponent,
+    PaynowComponent,
+   
     
   ],
   imports: [
