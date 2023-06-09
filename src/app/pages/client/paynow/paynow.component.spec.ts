@@ -18,4 +18,8 @@ describe('PaynowComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 71bfd0c779f52f921835a35293b497c59b3f4436
