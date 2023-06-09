@@ -2,14 +2,14 @@
   <main>
     <div class="head-title">
       <div class="left">
-        <h1>List Products</h1>
+        <h1>List Categories</h1>
         <ul class="breadcrumb">
           <li>
             <a routerLink="#">Admin</a>
           </li>
           <li><i class="bx bx-chevron-right"></i></li>
           <li>
-            <a class="active">Products</a>
+            <a class="active">Categories</a>
           </li>
         </ul>
       </div>
@@ -18,7 +18,7 @@
         <span class="text">Download PDF</span>
       </a>
     </div>
-    <a routerLink="/admin/products/add">
+    <a routerLink="/admin/categories/add">
       <button class="btn btn-primary">Add</button>
     </a>
 
@@ -27,24 +27,18 @@
         <thead>
           <tr>
             <th>Id</th>
-            <th>Product Name</th>
-            <th>Price</th>
-            <th>Image</th>
-            <th>Description</th>
+            <th>Category Name</th>
+
             <th>Action</th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let product of products; let i = index">
+          <tr *ngFor="let category of categories; let i = index">
             <td>{{ i + 1 }}</td>
-            <td>{{ product.name }}</td>
-            <td>{{ product.price }}</td>
+            <td>{{ category.name }}</td>
+
             <td>
-              <img style="width: 100px" src="{{ product.image }}" alt="" />
-            </td>
-            <td>{{ product.description }}</td>
-            <td>
-              <a routerLink="/admin/products/update/{{ product._id }}">
+              <a routerLink="/admin/categories/update/{{ category._id }}">
                 <span class="svg-icon svg-icon-md">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +77,7 @@
 
               <span
                 class="svg-icon svg-icon-md"
-                (click)="deleteProduct(product._id)"
+                (click)="deleteCategory(category._id)"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

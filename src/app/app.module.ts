@@ -26,6 +26,14 @@ import { ContactComponent } from './pages/client/contact/contact.component';
 import { BlogComponent } from './pages/client/blog/blog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthInterceptorInterceptor } from './interceptors/auth-interceptor.interceptor';
+import { CategoryListComponent } from './pages/admin/categories/category-list/category-list.component';
+import { AddUserComponent } from './pages/admin/users/add-user/add-user.component';
+import { UpdateUserComponent } from './pages/admin/users/update-user/update-user.component';
+import { ListUserComponent } from './pages/admin/users/list-user/list-user.component';
+import { UpdateCommentComponent } from './pages/admin/comments/update-comment/update-comment.component';
+import { ListCommentComponent } from './pages/admin/comments/list-comment/list-comment.component';
+import { AddCategoryComponent } from './pages/admin/categories/add-category/add-category.component';
+import { UpdateCategoryComponent } from './pages/admin/categories/update-category/update-category.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +57,14 @@ import { AuthInterceptorInterceptor } from './interceptors/auth-interceptor.inte
     AboutComponent,
     ContactComponent,
     BlogComponent,
+    CategoryListComponent,
+    AddUserComponent,
+    UpdateUserComponent,
+    ListUserComponent,
+    UpdateCommentComponent,
+    ListCommentComponent,
+    AddCategoryComponent,
+    UpdateCategoryComponent,
   ],
   imports: [
     BrowserModule,

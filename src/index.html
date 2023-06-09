@@ -26,6 +26,48 @@
       rel="stylesheet"
     />
     <script src="./assets/js/script.js"></script>
+    <!-- admin -->
+    <link
+      href="assets/css/themes/layout/aside/dark.css?v=7.0.5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/css/themes/layout/brand/dark.css?v=7.0.5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/css/themes/layout/header/menu/light.css?v=7.0.5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/css/themes/layout/header/base/light.css?v=7.0.5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/css/style.bundle.css?v=7.0.5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/plugins/custom/prismjs/prismjs.bundle.css?v=7.0.5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/plugins/global/plugins.bundle.css?v=7.0.5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css?v=7.0.5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- end admin -->
   </head>
   <body>
     <app-root></app-root>
@@ -77,6 +119,18 @@
 
         // Thêm lớp 'active' vào phần tử <a> có chỉ mục được truyền vào
         menuItems[index].classList.add("active");
+      }
+      function setActiveMenuAdmin(index) {
+        // Lấy tất cả các phần tử <a> trong menu
+        var menuItems = document.querySelectorAll("#menu .menu-link");
+
+        // Loại bỏ lớp 'active' khỏi tất cả các phần tử <a>
+        menuItems.forEach(function (item) {
+          item.classList.remove("is-active");
+        });
+
+        // Thêm lớp 'active' vào phần tử <a> có chỉ mục được truyền vào
+        menuItems[index].classList.add("is-active");
       }
     </script>
     <script
