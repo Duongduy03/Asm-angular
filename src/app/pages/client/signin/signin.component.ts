@@ -18,9 +18,21 @@ export class SigninComponent {
     private router: Router
   ) {}
   onHandleSubmit() {
+    const user = localStorage.getItem('credential');
+    console.log(user);
     if (this.formSignin.valid) {
       this.auth.signin(this.formSignin.value).subscribe((data) => {
         localStorage.setItem('credential', JSON.stringify(data));
+
+        alert('Đăng nhập thành công');
+        const credential = this.auth?.isAuthenticated();
+        if (credential?.user?.role == 'admin') {
+          this.router.navigateByUrl('/admin');
+          return true;
+        } else {
+          this.router.navigate(['/']);
+          return false;
+        }
       });
     }
   }

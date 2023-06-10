@@ -22,9 +22,9 @@ export class UpdateComponent {
   getCategories() {
     this.categoryService.getCategories().subscribe(
       (response) => {
-        const category = response.filter((item) => {
-          item._id !== this.products.categoryId._id;
-        });
+        // const category = response.filter((item) => {
+        //   item._id !== this.products.categoryId._id;
+        // });
         this.categories = response;
       },
       (error) => {

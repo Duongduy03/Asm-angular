@@ -41,9 +41,29 @@
       <a routerLink="#">
         <i class="header-icon bx bx-search"></i>
       </a>
-      <a routerLink="/signin">
-        <i class="header-icon bx bxs-user"></i>
-      </a>
+      <div *ngIf="user; else elseBlock">
+        <a routerLink="/customer/{{ user.user._id }}">
+          <img
+            style="
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              object-fit: cover;
+            "
+            _ngcontent-ng-c1522481837=""
+            src="../../../../../assets/images/anh_duy.jpg"
+            alt=""
+          />
+        </a>
+      </div>
+
+      <ng-template #elseBlock>
+        <!-- Nội dung sẽ được hiển thị nếu điều kiện là false -->
+        <a routerLink="/signin">
+          <i class="header-icon bx bxs-user"></i>
+        </a>
+      </ng-template>
+
       <a routerLink="#">
         <i class="header-icon bx bxs-shopping-bag"></i>
       </a>

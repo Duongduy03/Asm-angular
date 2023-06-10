@@ -36,6 +36,7 @@ import { AddCategoryComponent } from './pages/admin/categories/add-category/add-
 import { UpdateCategoryComponent } from './pages/admin/categories/update-category/update-category.component';
 import { CartComponent } from './pages/client/cart/cart.component';
 import { PaynowComponent } from './pages/client/paynow/paynow.component';
+import { CustomerComponent } from './pages/client/customer/customer.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { PaynowComponent } from './pages/client/paynow/paynow.component';
     UpdateCategoryComponent,
     CartComponent,
     PaynowComponent,
+    CustomerComponent,
   ],
   imports: [
     BrowserModule,
