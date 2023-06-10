@@ -53,6 +53,7 @@ export class UpdateUserComponent {
         this.user = users.user;
 
         this.formEdit.patchValue({
+          _id: this.user._id,
           name: users.user.name,
           email: users.user.email,
           password: users.user.password,
@@ -62,7 +63,7 @@ export class UpdateUserComponent {
     });
   }
   onHandleEdit() {
-    // console.log(this.user);
+    console.log(this.user);
 
     if (this.formEdit.valid) {
       const user: any = {
@@ -73,7 +74,7 @@ export class UpdateUserComponent {
       };
       console.log(user._id);
 
-      this.auth.updateUser(user._id, user).subscribe((data) => {
+      this.auth.updateUser(user).subscribe((data) => {
         alert('Update user thành công');
         this.router.navigateByUrl('/admin/users');
       });

@@ -8,9 +8,10 @@ import { ProductService } from 'src/app/services/service.service';
   styleUrls: ['./product-list.component.css'],
 })
 export class ProductListComponent {
-  status: boolean = false;
-  productName = '';
   products: any[] | undefined;
+
+  mess: string = '';
+
   constructor(private productService: ProductService, private router: Router) {}
 
   ngOnInit() {
@@ -27,11 +28,16 @@ export class ProductListComponent {
       }
     );
   }
-  getValue(e: any) {
-    this.productName = e.target.value;
-  }
-  changeStatus() {
-    this.status = !this.status;
+  search(searchValue: string) {
+    let searchData: any = this.products?.filter((item) =>
+      item.name.toLowerCase().includes(searchValue)
+    );
+    if (searchData.length > 0) {
+      this.products = searchData;
+    } else {
+      this.products = [];
+      this.mess = 'khong tim thay san pham nao';
+    }
   }
   navigateToDetail(productId: string) {
     this.router.navigate(['/products/' + productId]);
