@@ -13,6 +13,18 @@ import { AboutComponent } from './pages/client/about/about.component';
 import { BlogComponent } from './pages/client/blog/blog.component';
 import { ContactComponent } from './pages/client/contact/contact.component';
 import { ProductListComponent } from './pages/admin/produts/product-list/product-list.component';
+import { AuthGuard } from './guards/auth-guard.guard';
+import { AddComponent } from './pages/admin/produts/add/add.component';
+import { UpdateComponent } from './pages/admin/produts/update/update.component';
+import { CategoryListComponent } from './pages/admin/categories/category-list/category-list.component';
+import { AddCategoryComponent } from './pages/admin/categories/add-category/add-category.component';
+import { UpdateCategoryComponent } from './pages/admin/categories/update-category/update-category.component';
+import { ListUserComponent } from './pages/admin/users/list-user/list-user.component';
+import { AddUserComponent } from './pages/admin/users/add-user/add-user.component';
+import { UpdateUserComponent } from './pages/admin/users/update-user/update-user.component';
+import { CartComponent } from './pages/client/cart/cart.component';
+import { PaynowComponent } from './pages/client/paynow/paynow.component';
+import { CustomerComponent } from './pages/client/customer/customer.component';
 
 const routes: Routes = [
   // Client
@@ -26,18 +38,34 @@ const routes: Routes = [
       { path: 'about', component: AboutComponent },
       { path: 'blog', component: BlogComponent },
       { path: 'contact', component: ContactComponent },
+      { path: 'cart', component: CartComponent },
+      { path: 'customer/:id', component: CustomerComponent },
+      { path: 'paynow', component: PaynowComponent },
     ],
   },
   // Admin
   {
     path: 'admin',
     component: AdminLayoutComponent,
+    canActivate: [AuthGuard],
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
 
       { path: 'dashboard', component: DashboardComponent },
+      // products
       { path: 'products', component: ProductListComponent },
-      // { path: 'products/:id', component: ProductDetailComponent },
+
+      { path: 'products/add', component: AddComponent },
+      { path: 'products/update/:id', component: UpdateComponent },
+      // categories
+      { path: 'categories', component: CategoryListComponent },
+      { path: 'categories/add', component: AddCategoryComponent },
+      { path: 'categories/update/:id', component: UpdateCategoryComponent },
+
+      // users
+      { path: 'users', component: ListUserComponent },
+      { path: 'users/add', component: AddUserComponent },
+      { path: 'users/update/:id', component: UpdateUserComponent },
     ],
   },
   // Auth

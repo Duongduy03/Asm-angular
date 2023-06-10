@@ -1,1 +1,116 @@
-<p>productdetail works!</p>
+<main>
+  <section class="contact">
+    <div class="container">
+      <h1 class="big-title">Products Detail</h1>
+      <div class="about-icons">
+        <a routerLink="/">
+          <i class="about-icon bx bxs-home"></i>
+        </a>
+        <span> / Product / Detail</span>
+      </div>
+    </div>
+  </section>
+  <section class="blogs">
+    <div class="container" *ngIf="product">
+      <form action="">
+        <div class="flex-box">
+          <div class="left">
+            <div class="big-img">
+              <img src="{{ product.image }}" class="big-img1" />
+            </div>
+            <div class="images">
+              <div class="small-img">
+                <img
+                  class="img-tt"
+                  src="../../../../../assets/images/img12.png"
+                  onclick="showImg(this.src)"
+                />
+              </div>
+              <div class="small-img">
+                <img
+                  class="img-tt"
+                  src="../../../../../assets/images/img13.png"
+                  onclick="showImg(this.src)"
+                />
+              </div>
+              <div class="small-img">
+                <img
+                  class="img-tt"
+                  src="../../../../../assets/images/img16.png"
+                  onclick="showImg(this.src)"
+                />
+              </div>
+              <div class="small-img">
+                <img
+                  class="img-tt"
+                  src="../../../../../assets/images/img15.png"
+                  onclick="showImg(this.src)"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="right">
+            <div class="pname">{{ product.name }}</div>
+            <div class="ratings">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price">
+              Price: <span>$ {{ product.price }}</span>
+            </div>
+            <div class="size">
+              <p>Size :</p>
+              <input
+                type="text"
+                class="psize active"
+                onclick="setActiveSize(0)"
+                value="M"
+                readonly
+              />
+              <input
+                type="text"
+                value="L"
+                class="psize"
+                onclick="setActiveSize(1)"
+                readonly
+              />
+              <input
+                type="text"
+                value="XL"
+                class="psize"
+                onclick="setActiveSize(2)"
+                readonly
+              />
+              <input
+                type="text"
+                value="XXL"
+                class="psize"
+                onclick="setActiveSize(3)"
+                readonly
+              />
+            </div>
+            <div class="description">
+              <p>Descripiton:</p>
+              <p class="des">
+                {{ product.description }}
+              </p>
+            </div>
+            <div class="quantity">
+              <p>Quantity :</p>
+              <input type="number" min="1" max="5" value="1" />
+            </div>
+
+            <div class="btn-box">
+              <button class="cart-btn">Add to Cart</button>
+              <button class="buy-btn">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>

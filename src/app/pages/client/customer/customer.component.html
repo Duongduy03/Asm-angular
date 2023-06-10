@@ -1,0 +1,108 @@
+<div class="container">
+  <div class="content2">
+    <div class="breadcrumb">
+      <div class="breadcrumb-title">
+        <a routerLink="">Home</a> - information
+      </div>
+    </div>
+    <section class="section__info">
+      <div class="section__info--menu">
+        <div class="info--menu__img--box">
+          <img
+            src="../../../../assets/images/Toi.jpg"
+            alt="avatar"
+            class="header__user--img"
+          />
+        </div>
+        <div class="info--menu__username--box">
+          <div class="info--menu__username"></div>
+        </div>
+
+        <div class="info--menu__function">
+          <div class="info--menu__function--box">
+            <a routerLink="/customer" class="info--menu__function--link">
+              <div class="info--menu__function--img--box">
+                <img
+                  src="../../../../assets/images/information.png"
+                  alt=""
+                  class="info--menu__function--img"
+                />
+              </div>
+              <div class="info--menu__function--label">
+                Chỉnh sửa thông tin cá nhân
+              </div>
+            </a>
+          </div>
+          <div class="info--menu__function--box">
+            <a routerLink="/cart" class="info--menu__function--link">
+              <div class="info--menu__function--img--box">
+                <img
+                  src="../../../../assets/images/shopping-cart.png"
+                  alt=""
+                  class="info--menu__function--img"
+                />
+              </div>
+              <div class="info--menu__function--label">Quản Lý đặt hàng</div>
+            </a>
+          </div>
+          <div class="info--menu__function--box">
+            <a routerLink="" class="info--menu__function--link">
+              <div class="info--menu__function--img--box">
+                <img
+                  src="../../../../assets/images/wallet.png"
+                  alt=""
+                  class="info--menu__function--img"
+                />
+              </div>
+              <div class="info--menu__function--label">Ví của tôi</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="info--menu__logout">
+          <button class="info--menu__logout--link" id="btn-logout">
+            <div class="info--menu__logout--img--box">
+              <img
+                src="../../../../assets/images/shutdown.png"
+                alt=""
+                class="info--menu__logout--img"
+              />
+            </div>
+            <div class="info--menu__logout--label" (click)="logout()">Đăng xuất</div>
+          </button>
+        </div>
+      </div>
+      <div class="section__info--display" *ngIf="user">
+        <div class="section__info--display--box">
+          <label class="section__info--display--label">
+            Họ và tên: {{ user.name }}</label
+          >
+          <div class="section__info--display--textContent"></div>
+        </div>
+        <div class="section__info--display--box">
+          <label class="section__info--display--label"
+            >Email: {{ user.email }}</label
+          >
+          <div class="section__info--display--textContent">
+            <div class="section__info--display--textContent"></div>
+          </div>
+        </div>
+      
+        <div class="section__info--display--box">
+          <label class="section__info--display--label"
+            >Mật khẩu: {{ user.password }}</label
+          >
+          <div class="section__info--display--textContent"></div>
+        </div>
+        <div class="section__info--display--box">
+          <label class="section__info--display--label"
+            >Ngày tạo: {{ user.createdAt }}</label
+          >
+          <div class="section__info--display--textContent">
+            <div class="section__info--display--textContent"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

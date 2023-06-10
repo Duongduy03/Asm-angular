@@ -1,1 +1,181 @@
-<p>update works!</p>
+<section id="content">
+  <main>
+    <div class="head-title">
+      <div class="left">
+        <h1>Update Product</h1>
+        <ul class="breadcrumb">
+          <li>
+            <a routerLink="#">Admin</a>
+          </li>
+          <li><i class="bx bx-chevron-right"></i></li>
+          <li>
+            <a class="active">Products</a>
+          </li>
+          <li><i class="bx bx-chevron-right"></i></li>
+          <li>
+            <a class="active">Update</a>
+          </li>
+        </ul>
+      </div>
+      <a routerLink="#" class="btn-download">
+        <i class="bx bxs-cloud-download"></i>
+        <span class="text">Download PDF</span>
+      </a>
+    </div>
+    <hr />
+    <div class="form">
+      <form [formGroup]="formEdit" (ngSubmit)="onHandleEdit()">
+        <div class="d-flex align-items-center mb-3 pb-1">
+          <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219"></i>
+          <!-- <span class="h1 fw-bold mb-0">Logo</span> -->
+        </div>
+
+        <h1
+          class="fw-normal mb-3 pb-3 h1 fw-bold mb-0"
+          style="letter-spacing: 1px"
+        >
+          Form Update
+        </h1>
+
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form2Example17">Product Name</label>
+          <input
+            type="text"
+            id="form2Example17"
+            class="form-control form-control-lg"
+            name="name"
+            formControlName="name"
+          />
+        </div>
+        <div
+          style="color: red"
+          *ngIf="
+            formEdit.get('name')?.hasError('required') &&
+            (formEdit.get('name')?.touched || formEdit.get('name')?.dirty)
+          "
+        >
+          Name is Required
+        </div>
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form2Example17"> Price</label>
+          <input
+            type="text"
+            id="form2Example17"
+            class="form-control form-control-lg"
+            name="price"
+            formControlName="price"
+          />
+        </div>
+        <div
+          style="color: red"
+          *ngIf="
+            formEdit.get('price')?.hasError('required') &&
+            (formEdit.get('price')?.touched || formEdit.get('price')?.dirty)
+          "
+        >
+          Price is Required
+        </div>
+        <div
+          style="color: red"
+          *ngIf="
+            formEdit.get('price')?.hasError('pattern') &&
+            (formEdit.get('price')?.touched || formEdit.get('price')?.dirty)
+          "
+        >
+          Price is Number
+        </div>
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form2Example17"> Description</label>
+          <input
+            type="text"
+            id="form2Example17"
+            class="form-control form-control-lg"
+            name="description"
+            formControlName="description"
+          />
+        </div>
+        <div
+          style="color: red"
+          *ngIf="
+            formEdit.get('description')?.hasError('required') &&
+            (formEdit.get('description')?.touched ||
+              formEdit.get('description')?.dirty)
+          "
+        >
+          Description is Required
+        </div>
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form2Example17"> Image</label>
+          <input
+            type="text"
+            id="form2Example17"
+            class="form-control form-control-lg"
+            name="image"
+            formControlName="image"
+          />
+        </div>
+        <div
+          style="color: red"
+          *ngIf="
+            formEdit.get('image')?.hasError('required') &&
+            (formEdit.get('image')?.touched || formEdit.get('image')?.dirty)
+          "
+        >
+          Image is Required
+        </div>
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form2Example17"> Image 1</label>
+          <input
+            type="text"
+            id="form2Example17"
+            class="form-control form-control-lg"
+            name="image1"
+            formControlName="image1"
+          />
+        </div>
+        <div
+          style="color: red"
+          *ngIf="
+            formEdit.get('image')?.hasError('required') &&
+            (formEdit.get('image')?.touched || formEdit.get('image')?.dirty)
+          "
+        >
+          Image 1 is Required
+        </div>
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form2Example17"> Category</label>
+          <select
+            style="padding: 0px 10px"
+            name="categoryId"
+            class="form-control form-control-lg"
+            id="form2Example17"
+            formControlName="categoryId"
+          >
+            <option value=""></option>
+            <option
+              *ngFor="let category of categories"
+              value="{{ category._id }}"
+            >
+              {{ category.name }}
+            </option>
+          </select>
+        </div>
+
+        <div
+          style="color: red"
+          *ngIf="
+            formEdit.get('categoryId')?.hasError('required') &&
+            (formEdit.get('categoryId')?.touched ||
+              formEdit.get('categoryId')?.dirty)
+          "
+        >
+          CategoryId is Required
+        </div>
+
+        <div class="pt-1 mb-4">
+          <button class="btn btn-primary" type="submit">Update product</button>
+        </div>
+      </form>
+    </div>
+  </main>
+</section>

@@ -6,6 +6,7 @@
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <script src="js/jquery-1.11.1.min.js"></script>
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <script
       type="module"
@@ -25,6 +26,49 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <script src="./assets/js/script.js"></script>
+    <!-- admin -->
+    <link
+      href="assets/css/themes/layout/aside/dark.css?v=7.0.5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/css/themes/layout/brand/dark.css?v=7.0.5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/css/themes/layout/header/menu/light.css?v=7.0.5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/css/themes/layout/header/base/light.css?v=7.0.5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/css/style.bundle.css?v=7.0.5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/plugins/custom/prismjs/prismjs.bundle.css?v=7.0.5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/plugins/global/plugins.bundle.css?v=7.0.5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css?v=7.0.5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- end admin -->
   </head>
   <body>
     <app-root></app-root>
@@ -46,9 +90,38 @@
           menu && menu.classList.remove("is-show");
         }
       });
+      const bigImg = document.querySelector(".big-img1 img");
+      // let small = document.querySelector(".big-img .img-tt");
+      function showImg(pic) {
+        bigImg.src = pic;
+      }
     </script>
     <script>
       function setActiveMenu(index) {
+        // Lấy tất cả các phần tử <a> trong menu
+        var menuItems = document.querySelectorAll("#menu .menu-link");
+
+        // Loại bỏ lớp 'active' khỏi tất cả các phần tử <a>
+        menuItems.forEach(function (item) {
+          item.classList.remove("is-active");
+        });
+
+        // Thêm lớp 'active' vào phần tử <a> có chỉ mục được truyền vào
+        menuItems[index].classList.add("is-active");
+      }
+      function setActiveSize(index) {
+        // Lấy tất cả các phần tử <a> trong menu
+        var menuItems = document.querySelectorAll(".size .psize");
+
+        // Loại bỏ lớp 'active' khỏi tất cả các phần tử <a>
+        menuItems.forEach(function (item) {
+          item.classList.remove("active");
+        });
+
+        // Thêm lớp 'active' vào phần tử <a> có chỉ mục được truyền vào
+        menuItems[index].classList.add("active");
+      }
+      function setActiveMenuAdmin(index) {
         // Lấy tất cả các phần tử <a> trong menu
         var menuItems = document.querySelectorAll("#menu .menu-link");
 
@@ -76,5 +149,9 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
+
+    <!-- admin -->
+
+    <!-- Required vendors -->
   </body>
 </html>
