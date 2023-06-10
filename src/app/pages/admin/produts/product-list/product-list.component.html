@@ -21,7 +21,18 @@
     <a routerLink="/admin/products/add">
       <button class="btn btn-primary">Add</button>
     </a>
-
+    <form class="d-flex">
+      <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+        ngModel
+        name="keyword"
+        (ngModelChange)="search($event)"
+      />
+    </form>
+    <p>{{ mess }}</p>
     <div class="table">
       <table class="table table-bordered table-hover table-striped">
         <thead>

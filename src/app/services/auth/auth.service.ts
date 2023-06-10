@@ -23,8 +23,8 @@ export class AuthService {
       })
     );
   }
-  updateUser(id: string, user: any): Observable<any> {
-    const url = `${this.apiUrl}/users/update/${id}`;
+  updateUser(user: any): Observable<any> {
+    const url = `${this.apiUrl}/users/update/${user._id}`;
     // console.log(url);
 
     return this.http.patch<any>(url, user);
