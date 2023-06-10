@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of, switchMap } from 'rxjs';
+import { IUser } from 'src/app/interfaces/user';
 @Injectable({
   providedIn: 'root',
 })
@@ -12,6 +13,34 @@ export class AuthService {
   }
   signin(user: any): Observable<any> {
     return this.http.post(`${this.apiUrl}/signin`, user);
+  }
+  getUsers(): Observable<IUser> {
+    return this.http.get<any>(`${this.apiUrl}/users`).pipe(
+      switchMap((response) => {
+        console.log(response);
+
+        return of(response);
+      })
+    );
+  }
+  updateUser(id: string, user: any): Observable<any> {
+    const url = `${this.apiUrl}/users/update/${id}`;
+    // console.log(url);
+
+    return this.http.patch<any>(url, user);
+  }
+  logout() {
+    localStorage.clear();
+  }
+  deleteUser(id: string): Observable<any> {
+    const url = `${this.apiUrl}/users/${id}`;
+    return this.http.delete<any>(url);
+  }
+  getUser(id: string): Observable<any> {
+    const url = `${this.apiUrl}/users/${id}`;
+    // console.log(url);
+
+    return this.http.get<any>(url);
   }
   isAuthenticated(): any {
     return JSON.parse(localStorage.getItem('credential')!) || {};

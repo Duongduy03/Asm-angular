@@ -26,7 +26,7 @@ export class AuthGuard implements CanActivate {
     if (credential?.user?.role == 'admin') {
       return true;
     } else {
-      this.router.navigate(['/signin']);
+      this.router.navigate(['/']);
       return false;
     }
   }

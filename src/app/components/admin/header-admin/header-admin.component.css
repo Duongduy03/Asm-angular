@@ -155,6 +155,7 @@ li {
 }
 #sidebar .side-menu li a.logout {
   color: red;
+  cursor: pointer;
 }
 #sidebar .side-menu.top li a:hover {
   color: blue;

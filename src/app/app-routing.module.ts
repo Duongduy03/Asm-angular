@@ -24,6 +24,7 @@ import { AddUserComponent } from './pages/admin/users/add-user/add-user.componen
 import { UpdateUserComponent } from './pages/admin/users/update-user/update-user.component';
 import { CartComponent } from './pages/client/cart/cart.component';
 import { PaynowComponent } from './pages/client/paynow/paynow.component';
+import { CustomerComponent } from './pages/client/customer/customer.component';
 
 const routes: Routes = [
   // Client
@@ -38,8 +39,8 @@ const routes: Routes = [
       { path: 'blog', component: BlogComponent },
       { path: 'contact', component: ContactComponent },
       { path: 'cart', component: CartComponent },
+      { path: 'customer/:id', component: CustomerComponent },
       { path: 'paynow', component: PaynowComponent },
-      
     ],
   },
   // Admin
@@ -63,8 +64,8 @@ const routes: Routes = [
 
       // users
       { path: 'users', component: ListUserComponent },
-      { path: 'user/add', component: AddUserComponent },
-      { path: 'user/update/:id', component: UpdateUserComponent },
+      { path: 'users/add', component: AddUserComponent },
+      { path: 'users/update/:id', component: UpdateUserComponent },
     ],
   },
   // Auth
